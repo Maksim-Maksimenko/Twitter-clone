@@ -1,3 +1,6 @@
+
+In the development stage
+
 Simplified twitter client clone
 
 Links:

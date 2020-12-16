@@ -1,0 +1,27 @@
+.inc {
+	font-size: 0.9em;
+	color: #6E7F8D;
+	margin: 0;
+	margin-left: 20px;
+	}
+	
+	.aside {
+		height: 55%;
+	}
+	
+	.groupsNav {
+		margin-top:20px;
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+	
+	.link {
+	font-size: 0.95em;
+	color: #6E7F8D;
+	margin: 0;
+	padding-right: 15px;
+	}
+	
+	.link:nth-child(5) {
+		padding-right: 5px
+	}

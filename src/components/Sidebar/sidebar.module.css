@@ -1,0 +1,44 @@
+.aside {
+  display: grid;
+  margin-top: 6px;
+  grid-column-start: 4;
+}
+
+.wrp {
+  width: 25em;
+}
+
+.popular {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.groups {
+  background: #f5f8fa;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.titleLike{
+  font-style: bold;
+  font-weight: 9000;
+  font-size: 1.3em;
+  color: #14171a;
+  padding-top: 11px;
+  padding-left: 14px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.trends {
+  background: #f5f8fa;
+  border-radius: 15px;
+  height: 46px;
+}
+
+.trends p {
+  font-weight: 900;
+  font-size: 1em;
+  padding-top: 12px;
+  padding-left: 14px;
+}

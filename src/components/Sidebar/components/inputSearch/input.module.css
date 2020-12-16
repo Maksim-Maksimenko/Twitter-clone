@@ -1,0 +1,11 @@
+.inputSearch {
+  height: 2.7em;
+  width: 22em;
+  border-radius: 19.5px;
+  padding-left: 40px;
+  background: url("../../../../images/svg/search.svg") no-repeat 16px 13px;
+  margin-bottom: 16px;
+  background-color: #E6ECF0;
+  font-size: 1em;
+  border: 1px solid #E6ECF0;
+}

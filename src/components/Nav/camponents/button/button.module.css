@@ -1,0 +1,19 @@
+.btnFont {
+	width: 210px;
+  height: 50px;
+  background: rgba(29, 161, 242, 1);
+	border-radius: 25px;
+	border: 1px solid rgba(29, 161, 242, 1);
+	color: #fff;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttonTweet:hover {
+	background: rgba(29, 161, 242, .9);
+}

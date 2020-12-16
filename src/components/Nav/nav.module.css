@@ -1,0 +1,9 @@
+.menu {
+	max-height: 590px;
+	max-width: 218px;
+	grid-column-start: 2;
+	display: grid;
+	justify-self: end;
+}
+
+

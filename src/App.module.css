@@ -1,0 +1,14 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  min-height: 100vh;
+}
+
+.list {
+  justify-self: center;
+  grid-column-start: 3;
+  width: 670px;
+  border-left: 1px solid rgba(128, 128, 128, 0.3);
+  border-right: 1px solid rgba(128, 128, 128, 0.3);
+}

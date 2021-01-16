@@ -1,6 +1,4 @@
 .news {
-  border-left: 1px solid rgba(128, 128, 128, 0.3);
-  border-right: 1px solid rgba(128, 128, 128, 0.3);
   margin: 0;
 }
 
@@ -14,8 +12,8 @@
   margin-left: 60px;
   margin-top: 10px;
   margin-bottom: 5px;
-	position: relative;
-	justify-self: start;
+  position: relative;
+  justify-self: start;
 }
 
 .newsAvatar {
@@ -45,10 +43,22 @@
   margin-left: 75px;
   margin-right: 20px;
   margin-bottom: 13px;
+  outline: none;
+}
+
+.postNav button {
+  border: none;
+  outline: none;
+  background: white;
+  cursor: pointer;
 }
 
 .postNav img:hover {
-  filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
+  filter: invert(0.5) sepia(1) saturate(5);
+}
+
+.liLike:nth-child(3) .itemLike {
+  filter: invert(0.5) sepia(1) saturate(500);
 }
 
 .nortwest {
@@ -69,7 +79,7 @@
   line-height: 1em;
   color: #657786;
   margin: 0;
-	align-self: end;
+  align-self: end;
 }
 
 .data {
@@ -119,4 +129,5 @@
   font-size: 0.9em;
   line-height: 1.25em;
   color: #657786;
+  white-space: pre-wrap;
 }

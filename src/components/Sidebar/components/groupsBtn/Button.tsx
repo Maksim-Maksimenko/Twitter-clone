@@ -1,12 +1,12 @@
-import React, { useState, FC, useCallback } from 'react'
+import React, { useState, FC, useCallback } from "react"
 
-import styles from './button.module.css'
+import styles from "./button.module.css"
 
 type ClickType = {
   onClick?: (isFlag: boolean) => void
 }
 
-export const Button: FC<ClickType> = ({ onClick }) => {
+export const Button: FC<ClickType> = React.memo(({ onClick }) => {
   const [buttonFollow, setButtonFollow] = useState(false)
 
   const onClickHandler = useCallback(() => {
@@ -24,10 +24,8 @@ export const Button: FC<ClickType> = ({ onClick }) => {
         className={buttonFollow ? styles.groupsBtnActive : styles.groupsBtn}
         onClick={onClickHandler}
       >
-        {buttonFollow ? 'Subs...' : 'Follow'}
+        {buttonFollow ? "Subs..." : "Follow"}
       </button>
     </>
   )
-}
-
-export default Button
+})

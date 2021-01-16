@@ -1,37 +1,39 @@
-import React, { useRef,FC } from 'react'
+import React, { useState, useCallback, FC } from "react"
 
-import styles from './input.module.css'
+import styles from "./input.module.css"
 
-// вопросики 
-// type ClickType = {
-//   KeyPressHandlerSpy: (value:string) => string | void
-// }
+export const InputSearch: FC = React.memo(() => {
+  const [value, setValue] = useState("")
 
-export const InputSearch: FC = () => {
-	const ref = useRef<HTMLInputElement>(null)
-	
-	const KeyPressHandler = (e: React.KeyboardEvent) => { //useCallback
-		if(e.key === 'Enter') {
-      // KeyPressHandlerSpy(ref.current!.value) // вопросики 
-			console.log(ref.current!.value)
-			ref.current!.value = ''
-    }
-  }
-  
-  //переписать на стейт /// 
+  const ChangeEvent = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value)
+  }, [])
+
+  const KeyPressHandler = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "Enter") {
+        console.log(value)
+        setValue("")
+      }
+    },
+    [value]
+  )
 
   return (
     <>
-      <input
-        type="text"
-        placeholder="Search Twitter"
-        className={styles.inputSearch}
-        ref={ref}
-        onKeyPress={KeyPressHandler}
-        data-testid="input"
-      />
+      <label>
+        <span className={styles.visuallyHidden}>seaerch</span>
+        <input
+          type="text"
+          placeholder="Search Twitter"
+          className={styles.inputSearch}
+          value={value}
+          onKeyPress={KeyPressHandler}
+          onChange={ChangeEvent}
+          data-testid="input"
+          id="check"
+        />
+      </label>
     </>
   )
-}
-
-export default InputSearch
+})

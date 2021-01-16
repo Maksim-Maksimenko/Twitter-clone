@@ -1,19 +1,20 @@
-import React, { FC } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import React, { FC } from "react"
+import { Button } from "./components/button/Button"
+import { MenuItems } from "./components/menuItems/MenuItems"
 
-import Button from './camponents/button/Button'
-import styles from './nav.module.css'
-import MenuItems from './camponents/menuItems/MenuItems'
+import styles from "./nav.module.css"
 
-export const Nav: FC = () => {
-  return (
-    <Router>
-      <nav className={styles.menu}>
-        <MenuItems />
-        <Button />
-      </nav>
-    </Router>
-  )
+type props = {
+  addPost: (value: string) => void
 }
 
-// export default Nav
+export const Nav: FC<props> = React.memo(({ addPost }) => {
+  return (
+    <div className={styles.menu}>
+      <nav>
+        <MenuItems />
+      </nav>
+      <Button addPost={addPost} />
+    </div>
+  )
+})

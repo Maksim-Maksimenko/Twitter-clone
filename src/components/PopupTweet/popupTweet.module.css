@@ -1,26 +1,25 @@
 .wrapper {
 	position: absolute;
 	z-index: 1;
-	display: flex; 
+	/* display: grid;  */
 	top: 25vh;
 	left: 28vw;
 }
 
 .wrp {
-	/* position: relative; */
 	width: 700px;
 	height: 350px;
 	background-color: rgba(255, 255, 255); 
 	border-radius: 30px;
 	box-shadow: 0px 0px 800px rgba(0,0,0,0.9);
-	display: flex;
+	/* display: flex; */
 	justify-self: center;
 }
 
 .close {
 	width: 100%;
 	height: 5.5vh;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.76);
 	display: flex;
 	align-items: center;
 }
@@ -29,3 +28,99 @@
 	margin-left: 40px;
 	font-size: 1.5em;
 }
+
+
+.wrapperInput {
+	height: 160px;
+	display: flex;
+}
+
+.newsAvatar {
+  width: 70px;
+  height: 70px;
+	border-radius: 50%;
+	margin-left: 15px;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+textarea::placeholder {
+  font-size: 1.5em;
+	font-style: italic;
+	padding-top: 40px
+}
+
+.inputText {
+ 	width: 550px;
+ 	border: none;
+ 	border-bottom: 1px solid rgba(128, 128, 128, 0.411);
+}
+
+.wrapperPrivate {
+	display: flex;
+  margin-left: 105px;
+}
+
+.wrapperNav {
+	margin-left: 105px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	width: 210px;
+  height: 50px;
+  background: rgba(29, 160, 242, 0.5);
+	border-radius: 25px;
+	border: 1px solid rgba(29, 160, 242, 0.349);
+	color: #fff;
+	/* cursor: pointer; */
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 35px;
+}
+
+.btnActive {
+	width: 210px;
+  height: 50px;
+  background: rgba(29, 160, 242, 1);
+	border-radius: 25px;
+	border: 1px solid rgba(29, 160, 242, 1);
+	color: #fff;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 35px;
+}
+
+.wrapperItem {
+	display: flex;
+	align-items: center;
+}
+
+
+.popup {
+	color: rgba(29, 161, 242, 1);
+	filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
+	margin-right: 15px;
+	
+}
+
+.popupBtn {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.cl{
+	display: none;
+}
+

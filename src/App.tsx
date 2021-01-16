@@ -1,42 +1,46 @@
-import React, { FC } from 'react'
-import { createBrowserHistory } from 'history'
-import { Switch, Route, Router } from 'react-router-dom'
+import React, { FC, useState, useCallback, useEffect } from "react"
 
-import './App.css' // написать модули
+import { Nav } from "./components/Nav/Nav"
+import { Sidebar } from "./components/Sidebar/Sidebar"
+import { Content } from "./components/Content/Content"
 
-import { Nav } from './components/Nav/Nav'
-import { Profile } from './components/Profile/Profile' //вопросики
-import { ProfileNav } from './components/ProfileNav/ProfileNav'
-import { News } from './components/News/News'
-import { Sidebar } from './components/Sidebar/Sidebar'
-import { TweetsAndRepliesTest } from './components/ProfileNav/componentsTest/TweetsAndRepliesTest'
-import { LikesTest } from './components/ProfileNav/componentsTest/LikesTest'
-import { MediaTest } from './components/ProfileNav/componentsTest/MediaTest'
+import styles from "./App.module.css"
 
-const browserHistory = createBrowserHistory()
-
-const App: FC = () => {
-  return (
-    <>
-      <main className="main">
-        <Router history={browserHistory}>
-          <Nav />
-          <section className="list">
-            <Profile />
-            <ProfileNav />
-            <Switch>
-              <Route path="/" component={News} exact />
-              <Route path="/Tweets" component={News} exact />
-              <Route path="/Tweets and replies" component={TweetsAndRepliesTest} />
-              <Route path="/Likes" component={LikesTest} />
-              <Route path="/Media" component={MediaTest} />
-            </Switch>
-          </section>
-          <Sidebar />
-        </Router>
-      </main>
-    </>
-  )
+export type postProps = {
+  value: string
+  id: number
+  isFlagLike: boolean
 }
 
-export default App
+export const App: FC = React.memo(() => {
+  const [postNews, SetPostNews] = useState<postProps[]>([])
+
+  useEffect(() => {
+    const saved = JSON.parse(localStorage.getItem("post") || "[]") as postProps[]
+    SetPostNews(saved)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("post", JSON.stringify(postNews))
+  }, [postNews])
+
+  const addPost = useCallback((value: string) => {
+    const newPost: postProps = {
+      value: value,
+      isFlagLike: false,
+      id: Date.now()
+    }
+
+    SetPostNews((prev) => [newPost, ...prev])
+  }, [])
+
+  return (
+    <main className={styles.main}>
+      <Nav addPost={addPost} />
+      <section className={styles.list}>
+        <Content postNews={postNews} SetPostNews={SetPostNews} />
+      </section>
+      <Sidebar />
+    </main>
+  )
+})

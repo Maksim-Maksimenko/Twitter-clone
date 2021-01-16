@@ -1,14 +1,13 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
-import InputSearch from './components/inputSearch/InputSearch'
-import SidebarNav from './components/sidebarNav/SidebarNav'
-import GroupsItem from './components/groupsItems/GroupsItems'
+import { InputSearch } from "./components/inputSearch/InputSearch";
+import { SidebarNav } from "./components/sidebarNav/SidebarNav";
+import { GroupsItem } from "./components/groupsItems/GroupsItems";
 
-import styles from './sidebar.module.css'
+import styles from "./sidebar.module.css";
+import popular from "../../images/jpg/popular.jpg";
 
-import popular from '../../images/jpg/popular.jpg'
-
-export const Sidebar: FC = () => {
+export const Sidebar: FC = React.memo(() => {
   return (
     <aside className={styles.aside}>
       <div className={styles.wrp}>
@@ -24,7 +23,5 @@ export const Sidebar: FC = () => {
         <SidebarNav />
       </div>
     </aside>
-  )
-}
-
-// export default Sidebar
+  );
+});

@@ -1,0 +1,137 @@
+/* bookmarks */
+.wrapper {
+  /* width: 670px;
+  height: 100vh;
+  border-left: 1px solid rgba(128, 128, 128, 0.3);
+  border-right: 1px solid rgba(128, 128, 128, 0.3); */
+}
+
+.newsWrapper {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.priv {
+  display: grid;
+  grid-template-columns: 160px 155px 1fr;
+  margin-left: 60px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  position: relative;
+  justify-self: start;
+}
+
+.newsAvatar {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  position: absolute;
+  left: -50px;
+}
+
+.postWrapper {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 25px;
+  margin-left: 75px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.postImg {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.postNav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 75px;
+  margin-right: 20px;
+  margin-bottom: 13px;
+  outline: none;
+}
+
+.postNav button {
+  border: none;
+  outline: none;
+  background: white;
+  cursor: pointer;
+}
+
+.postNav img:hover {
+  filter: invert(0.5) sepia(1) saturate(5);
+}
+
+.liLike:nth-child(3) .itemLike {
+  filter: invert(0.5) sepia(1) saturate(500);
+}
+
+.nortwest {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1em;
+  color: #14171a;
+  margin: 0;
+  margin-left: 15px;
+  align-self: end;
+}
+
+.agency {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1em;
+  color: #657786;
+  margin: 0;
+  align-self: end;
+}
+
+.data {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #657786;
+  margin: 0;
+  align-self: end;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 25px;
+}
+
+.data img {
+  height: 7px;
+  align-self: center;
+}
+
+.selected {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1em;
+  color: #14171a;
+  margin: 0;
+  margin-left: 75px;
+  margin-bottom: 12px;
+}
+
+.selected span {
+  color: #1da1f2;
+}
+
+.digital {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1em;
+  color: #424447;
+}
+
+.digitalItem {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1.25em;
+  color: #657786;
+  white-space: pre-wrap;
+}

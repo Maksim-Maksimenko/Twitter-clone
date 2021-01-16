@@ -1,48 +1,48 @@
-import home from '../../images/svg/nav/home.svg'
-import explore from '../../images/svg/nav/explore.svg'
-import notifications from '../../images/svg/nav/notifications.svg'
-import messages from '../../images/svg/nav/messages.svg'
-import bookmarks from '../../images/svg/nav/bookmarks.svg'
-import lists from '../../images/svg/nav/lists.svg'
-import profile from '../../images/svg/nav/profile.svg'
-import more from '../../images/svg/nav/more.svg'
+import home from "../../images/svg/nav/home.svg"
+import explore from "../../images/svg/nav/explore.svg"
+import notifications from "../../images/svg/nav/notifications.svg"
+import messages from "../../images/svg/nav/messages.svg"
+import bookmarks from "../../images/svg/nav/bookmarks.svg"
+import lists from "../../images/svg/nav/lists.svg"
+import profile from "../../images/svg/nav/profile.svg"
+import more from "../../images/svg/nav/more.svg"
 
 type Title = {
-  title: string,
+  title: string
   icon: string
 }
 
 const dataNav: Array<Title> = [
   {
-    title: 'Home',
+    title: "Home",
     icon: home
   },
   {
-    title: 'Explore',
+    title: "Explore",
     icon: explore
   },
   {
-    title: 'Notifications',
+    title: "Notifications",
     icon: notifications
   },
   {
-    title: 'Messages',
+    title: "Messages",
     icon: messages
   },
   {
-    title: 'Bookmarks',
+    title: "Bookmarks",
     icon: bookmarks
   },
   {
-    title: 'Lists',
+    title: "Lists",
     icon: lists
   },
   {
-    title: 'Profile',
+    title: "Profile",
     icon: profile
   },
   {
-    title: 'More',
+    title: "More",
     icon: more
   }
 ]

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { GroupItem } from './components/GroupItem'
+import React, { useState, useCallback } from "react"
+import { GroupItem } from "./components/GroupItem"
 
-import Button from '../../components/groupsBtn/Button'
-import groups from './dataGroups'
-import styles from './groupsItems.module.css'
+import { Button } from "../../components/groupsBtn/Button"
+import groups from "./dataGroups"
+import styles from "./groupsItems.module.css"
 
 type GroupsItemType = {
   onClickHandler?: (isOpen: boolean) => void
@@ -11,17 +11,16 @@ type GroupsItemType = {
 
 const firstThreeGroups = groups.slice(0, 3)
 
-export const GroupsItem: React.FC<GroupsItemType> = ({ onClickHandler }) => {
+export const GroupsItem: React.FC<GroupsItemType> = React.memo(({ onClickHandler }) => {
   const [showItems, setShowItems] = useState(false)
 
-  const clickHandler = () => {
-    //useCallback
+  const clickHandler = useCallback(() => {
     setShowItems(!showItems)
 
     if (onClickHandler) {
       onClickHandler(showItems)
     }
-  }
+  }, [onClickHandler, showItems])
 
   return (
     <>
@@ -47,6 +46,4 @@ export const GroupsItem: React.FC<GroupsItemType> = ({ onClickHandler }) => {
       </button>
     </>
   )
-}
-
-export default GroupsItem
+})
